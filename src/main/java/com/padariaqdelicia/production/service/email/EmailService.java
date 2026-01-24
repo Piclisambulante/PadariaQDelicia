@@ -1,4 +1,4 @@
-package com.padariaqdelicia.production.service;
+package com.padariaqdelicia.production.service.email;
 
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -16,11 +16,15 @@ public class EmailService {
     }
 
     public void enviarConfirmacao(Pedido pedido) {
+
+        String email = pedido.getClienteEmail();
+        String nome = pedido.getClienteNome();
+        String token = pedido.getTokenConfirmacao();
         String linkConfirmacao =
                 "http://localhost:8080/pedidos/confirmar?token=" + pedido.getTokenConfirmacao();
 
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("cliente@email.com"); 
+        message.setTo(pedido.getClienteEmail());
         message.setSubject("Confirme seu pedido 🍞");
         message.setText(
                 "Olá " + pedido.getClienteNome() + ",\n\n"

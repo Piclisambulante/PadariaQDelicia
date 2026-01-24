@@ -21,11 +21,17 @@ public class Product {
     @Column (nullable = false)
     private Double price;
 
+    @Column (nullable = true)
+    private Boolean ativo = true;
 
     // Getters and Setters
     
     public Long getId() {
         return id;
+    }
+
+    public Boolean isAtivo() {
+        return ativo;
     }
 
     public String getName() {
@@ -38,6 +44,10 @@ public class Product {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public void setAtivo(Boolean ativo) {
+        this.ativo = ativo;
     }
 
     public void setName(String name) {
