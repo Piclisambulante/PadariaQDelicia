@@ -390,3 +390,11 @@ footer {
   font-size: 14px;
   opacity: 0.75;
 }
+.loc a {
+  color: white; 
+  text-decoration: none;
+}
+
+.loc a:hover {
+  text-decoration: underline; 
+}

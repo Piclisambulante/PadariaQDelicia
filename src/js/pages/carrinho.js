@@ -1,4 +1,3 @@
-import { fazerPedido } from "../api/api.js";
 
 let carrinho = [];
 

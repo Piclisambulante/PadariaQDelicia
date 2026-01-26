@@ -15,16 +15,16 @@ document.querySelectorAll(".add-icon").forEach(button => {
 });
 
 const btn = document.getElementById("btnEncomenda");
+const btnHeader = document.getElementById("btnContato");
 const contato = document.getElementById("contato");
-const headerContato = document.getElementById(" ")
 
-btn.addEventListener("click", (e) => {
+function scrollToContato(e) {
   e.preventDefault();
 
   const start = window.pageYOffset;
   const end = contato.getBoundingClientRect().top + start;
   const distance = end - start;
-  const duration = 900; 
+  const duration = 900;
   let startTime = null;
 
   function easeInOut(t) {
@@ -46,7 +46,9 @@ btn.addEventListener("click", (e) => {
   }
 
   requestAnimationFrame(animation);
-});
+}
+btn.addEventListener("click", scrollToContato);
+btnHeader.addEventListener("click", scrollToContato);
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

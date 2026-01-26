@@ -412,8 +412,8 @@ header {
 }
 
 .category-card img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid transparent;
@@ -426,8 +426,8 @@ header {
 }
 
 .category-card p {
-  margin-top: 12px;
-  font-size: 16px;
+  margin-top: 16px;
+  font-size: 20px;
   color: #333;
 }
 
@@ -494,8 +494,7 @@ header {
   transform: scale(1.08);
 }
 
-.btnNumber:hover,
-.btn-secundary:hover {
+.btnNumber:hover{
   background: rgba(201, 188, 188, 0.308);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.466);
   border-color: #E5E7E4;
@@ -559,4 +558,12 @@ footer {
   text-align: center;
   font-size: 14px;
   opacity: 0.75;
+}
+.loc a {
+  color: white; 
+  text-decoration: none;
+}
+
+.loc a:hover {
+  text-decoration: underline; 
 }
