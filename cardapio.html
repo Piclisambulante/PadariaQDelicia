@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/cardapio.css">
+  <title>Q'delicia - Cardapio</title>
+  <link rel="shortcut icon" href="src/images/logoPadaria-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <header class="reveal">
+    <div class="links-header">
+      <div class="header-left">
+        <a href="index.html">Início</a>
+        <a href="#">Cardápio</a>
+        <a href="#" id="btnEncomenda">Contato</a>
+      </div>
+
+      <div class="header-right">
+        <a href="carrinho.html">
+          <img src="src/images/cart.png" alt="carrinho">
+        </a>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="CardapioTitle">
+    <div class="cardapio-titulo">
+      <h1 class="titulo">Nosso Cardápio</h1>
+      <h3 class="subTitulo">Delícias feitas com amor e ingredientes frescos todos os dias</h3>
+    </div>
+    <div class="btnsCardapios">
+      <div class="botaozaoCardapio">
+        <button data-filtro="todos" class="botao">Todos</button>
+        <button data-filtro="salgados" class="botao">Salgados</button>
+        <button data-filtro="doces" class="botao">Doces</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="cardapio">
+    <div class="cardapio-cards" id="produtos">
+
+    </div>
+  </section>
+
+  <section class="contact reveal" id="contato">
+    <div class="contact-text">
+      <h1 class="contact-title">Faça sua Encomenda</h1>
+      <p class="contact-subtitle">Encomendas para festas,
+        eventos corporativos e ocasiões especiais. Entre em contato conosco!</p>
+    </div>
+    <div class="contact-btn">
+      <a href="https://wa.me/5547988114930?text=Olá,%20gostaria%20de%20fazer%20um%20pedido!" target="_blank"
+        rel="noopener noreferrer" class="btnWhats">WhatsApp</a>
+      <a class="btnNumber" id="btnNumber">(47) 98811-4930</a>
+    </div>
+  </section>
+
+  <footer class="reveal">
+    <div class="footerContent">
+      <div class="Qdelicia-footer footerCol">
+        <h3 class="footerTitle">Q'Delicia</h3>
+        <p class="p-footer">Há mais de 10 anos levando sabor e carinho para sua mesa.</p>
+
+        <div class="socialIcons">
+          <a href="https://www.instagram.com/q.delicia_padaria/" target="_blank" rel="noopener noreferrer">
+            <img src="src/images/Ig.png" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@padaria_q.delicia" target="_blank" rel="noopener noreferrer">
+            <img src="src/images/tiktok.png" alt="tiktok" class="tikTokIcon">
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-footer footerCol">
+        <h3 class="footerTitle">Contato</h3>
+        <p class="number">(47) 98811-4930</p>
+        <p class="loc">Rua Frei Estanislau Schaette, n° 686</p>
+      </div>
+
+      <div class="time footerCol">
+        <h3 class="footerTitle">Horário</h3>
+        <p class="horario">
+          Seg - Sáb: 7h às 20h <br>
+          Dom: 8h às 14h
+        </p>
+      </div>
+    </div>
+
+    <p class="footerCopy">© Q.delicia</p>
+  </footer>
+
+  <script src="src/js/pages/cardapio.js"></script>
+</body>
+
+</html>

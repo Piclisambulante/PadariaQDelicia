@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+body {
+    background-color: #F1ECE3;
+    color: #2E2E2E;
+}
+
+
+/* HEADER */
+header {
+    background-color: #FFFDF9;
+    padding: 20px 80px;
+}
+
+.links-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-left a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #3F7C54;
+    font-weight: 500;
+}
+
+.header-left a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #3F7C54;
+    transition: width 0.3s ease;
+}
+
+.header-left a:hover::after {
+    width: 100%;
+}
+
+.header-right a img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.header-right a img:hover {
+    opacity: 0.8;
+}
+
+.cardapio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* TITULO */
+.CardapioTitle {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.cardapio-titulo .titulo {
+    font-size: 54px;
+    color: #3F7C54;
+}
+
+.subTitulo {
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #4F6F5A;
+}
+
+
+.btnsCardapios {
+    padding: 20px;
+}
+
+.botaozaoCardapio {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.botao {
+    background-color: transparent;
+    border: 1px solid #696262;
+    border-radius: 12px;
+    color: #696262;
+    width: 80px;
+    height: 20px;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.botao:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.botao.selecionado {
+    background-color: #3F7C54;
+    border-color: #3F7C54;
+    color: #fff;
+}
+/* CARDÁPIO */
+.cardapio {
+    padding: 40px 20px 80px;
+}
+
+.cardapio-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cardapio-card {
+    height: 340px;
+    background-color: #FFFDF9;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardapio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cardapio-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.cardapio-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.cardapio-card:hover .cardapio-image img {
+    filter: brightness(0.7);
+}
+
+.add-icon {
+    position: absolute;
+    bottom: -6px;
+    right: -6px;
+
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+    background-color: #3F7C54;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.add-icon span {
+    transform: translateY(-2px);
+}
+
+.cardapio-card:hover .add-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* TEXTOS */
+.cardapio-card h3,
+.cardapio-card p {
+    padding: 0 20px;
+}
+
+.cardapio-card h3 {
+    margin-top: 14px;
+    margin-bottom: 4px;
+    font-size: 20px;
+    color: #2F5E40;
+}
+
+.cardapio-card p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 40px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* PREÇO */
+.preco {
+    margin-top: auto;
+    padding: 0 20px 18px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #3F7C54;
+}
+
+/* CONTATO */
+.contact {
+  background-color: #3F7C54;
+  color: white;
+  padding: 120px;
+  text-align: center;
+}
+
+.contact-text {
+  transform: translateY(-40px);
+}
+
+.contact-title {
+  transform: translateY(-10px);
+}
+
+.contact-subtitle {
+  font-size: large;
+  transform: translateY(5px);
+}
+
+.contact-btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+.contact-btn a {
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btnWhats {
+  background-color: floralwhite;
+  color: #2F5E40;
+
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btnNumber {
+  background-color: transparent;
+  border: 2px solid #E5E7E4;
+  color: floralwhite;
+
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btnWhats:hover {
+  transform: scale(1.08);
+}
+
+.btnNumber:hover {
+  background: rgba(201, 188, 188, 0.308);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.466);
+  border-color: #E5E7E4;
+  transform: scale(1.05);
+}
+
+/*FOOTER*/
+footer {
+  background-color: #2F5E40;
+  color: white;
+  padding: 50px 80px 30px;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.footerCol {
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  min-height: 28px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.socialIcons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.socialIcons img.tikTokIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.socialIcons img:hover {
+  transform: scale(1.1);
+}
+
+.footerCopy {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.75;
+}

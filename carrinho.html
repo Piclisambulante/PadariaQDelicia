@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q'delicia - Carrinho</title>
+
+    <link rel="stylesheet" href="src/css/carrinho.css">
+    <link rel="shortcut icon" href="src/images/logoPadaria-removebg-preview.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header class="reveal">
+        <div class="links-header">
+
+            <div class="header-left">
+                <a href="index.html">Início</a>
+                <a href="cardapio.html">Cardápio</a>
+                <a href="#" id="btnEncomenda">Contato</a>
+            </div>
+
+            <div class="header-right">
+                <a href="carrinho.html">
+                    <img src="src/images/cart.png" alt="Carrinho">
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="Titulo reveal">
+        <a href="cardapio.html" class="VoltarCardapio">← Voltar ao Cardápio</a>
+
+        <h2 class="seuCarrinho">
+            <img src="src/images/shop.png" alt="Carrinho">
+            <span>Seu Carrinho</span>
+        </h2>
+    </section>
+
+    <main class="cart-content reveal">
+        
+        <section class="cart-items cart-is-empty reveal">
+            <h2>Itens do Pedido</h2>
+
+            <div class="cart-empty">
+                <img src="src/images/empty-cart.png" alt="Carrinho vazio">
+                <p>Seu carrinho está vazio no momento.</p>
+
+                <a href="cardapio.html" class="btn-cardapio">
+                    Ver cardápio
+                </a>
+            </div>
+
+            <div class="cart-items-list"></div>
+        </section>
+
+        <aside class="cart-summary cart-summary-disabled reveal">
+            <h2>Resumo do Pedido</h2>
+
+            <div class="row">
+                <span>Subtotal</span>
+                <span>R$ 0,00</span>
+            </div>
+
+            <div class="row">
+                <span>Entrega</span>
+                <span>—</span>
+            </div>
+
+            <hr>
+
+            <div class="total">
+                <strong>Total</strong>
+                <strong>R$ 0,00</strong>
+            </div>
+
+            <div class="customer">
+                <h3>Seus Dados</h3>
+
+                <label>
+                    Nome *
+                    <input type="text" placeholder="Seu nome completo" disabled>
+                </label>
+
+                <label>
+                    Telefone (opcional)
+                    <input type="tel" placeholder="(11) 99999-9999" disabled>
+                </label>
+
+                <button class="whatsapp" disabled>
+                    Enviar Pedido via WhatsApp
+                </button>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="reveal">
+        <div class="footerContent">
+            <div class="Qdelicia-footer footerCol">
+                <h3 class="footerTitle">Q'Delicia</h3>
+                <p class="p-footer">Há mais de 10 anos levando sabor e carinho para sua mesa.</p>
+
+                <div class="socialIcons">
+                    <a href="https://www.instagram.com/q.delicia_padaria/" target="_blank">
+                        <img src="src/images/Ig.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@padaria_q.delicia" target="_blank">
+                        <img src="src/images/tiktok.png" alt="tiktok" class="tikTokIcon">
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-footer footerCol">
+                <h3 class="footerTitle">Contato</h3>
+                <p class="number">(47) 98811-4930</p>
+                <p class="loc">Rua Frei Estanislau Schaette, n° 686</p>
+            </div>
+
+            <div class="time footerCol">
+                <h3 class="footerTitle">Horário</h3>
+                <p class="horario">
+                    Seg - Sáb: 7h às 20h <br>
+                    Dom: 8h às 14h
+                </p>
+            </div>
+        </div>
+
+        <p class="footerCopy">© Q.delicia</p>
+    </footer>
+
+    <script src="src/js/pages/carrinho.js"></script>
+</body>
+
+</html>
